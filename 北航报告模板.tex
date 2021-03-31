@@ -1,0 +1,62 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\graphicspath{{chapter/}{figures/}}
+\usepackage{CJK}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 封面部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.2\textwidth]{sf1.png}\par
+	\vspace{1cm}
+	\includegraphics[width=0.8\textwidth]{sf.png}\par
+	\vspace{1cm}
+	{\kaishu\LARGE 课程名称 \par}
+	\vspace{2cm}
+	{\Huge\bfseries 课程论文标题 \par}
+	\vspace{3.5cm}
+	{\Large 姓名： \par}
+	{\Large 学号： \par}
+	\vfill
+	% {1160000000}\par
+	\fangsong{计算机学院}
+
+	\vfill
+% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+\section{绪论}
+\subsection{背景}
+aaa\cite{ref1}
+
+% 加图
+\begin{figure}[ht] % figure1 备注便于查阅
+	\centering
+	\includegraphics[width=0.6\textwidth]{sf1.png}% 可调宽度，自适应高度
+	\caption{XX图}% 图注名称，简单说明
+	\label{figure1} %引用标注 
+\end{figure}
+
+% 加公式
+\begin{equation}
+	\begin{split}
+	\sum_{i=1}^{m} \|\sum_{j=1}^{d^{'}}z_{ij}w_j-x_i \Vert_2^2 = \sum_{i=1}^{m}z_i^T z_i - 2\sum_{i=1}^m z_i^T
+	W^T x_i + const \\
+	\propto -tr(W^T(\sum_{i=1}^m x_i x_i^T)W) \label{1}
+	\end{split}
+\end{equation}
+
+% 参考文献
+\newpage
+\begin{thebibliography}{99}  
+	\bibitem{ref1}Bellman R, Kalaba R. On adaptive control processes[J]. IRE Transactions on Automatic Control, 1959, 4(2): 1-9.  
+	\end{thebibliography}
+\end{document}
